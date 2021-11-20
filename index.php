@@ -68,22 +68,19 @@
 
   </form>
 
-  <script async
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGLIJp3hCBhxUiDqbjiCjSAKfS5_JutVw&callback=initMap">
-  </script>
-
   <script>
 
   function get_loc(name){
 
       const xhttp = new XMLHttpRequest();
       xhttp.onload = function() {
-         // document.getElementById("g-maps").src =this.responseText;
+
          const res = JSON.parse(this.responseText);
          lat = res.lat;
          long = res.long;
          console.log("latitude : "+lat+"\nlongitude : "+long);
 
+         document.getElementById("g-maps").src ="https://maps.google.com/maps?q="+lat+","+long+"&output=embed";
         }
 
       // Send a request
