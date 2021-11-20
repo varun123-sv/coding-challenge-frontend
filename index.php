@@ -31,13 +31,14 @@
 
   ?>
 
-  <iframe id="google-maps"
+  <iframe id="g-maps"
     width="810"
     height="710"
     frameborder="0" style="border:0"
-    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDGLIJp3hCBhxUiDqbjiCjSAKfS5_JutVw&q=10.305385,77.923029" allowfullscreen>
+    src="https://maps.google.com/maps?q=28.553558,77.259132&output=embed" allowfullscreen>
+
   </iframe>
-  <p id="ajax-req"></p>
+  <p id="ajax-req" style="color:white;"></p>
 
   <div class="background"></div>
 
@@ -77,7 +78,12 @@
 
       const xhttp = new XMLHttpRequest();
       xhttp.onload = function() {
-          document.getElementById("ajax-req").innerHTML =this.responseText;
+         // document.getElementById("g-maps").src =this.responseText;
+         const res = JSON.parse(this.responseText);
+         lat = res.lat;
+         long = res.long;
+         console.log("latitude : "+lat+"\nlongitude : "+long);
+
         }
 
       // Send a request

@@ -1,6 +1,6 @@
 <?php
     if(isset($_GET['name'])){
-        echo $_GET['name'];
+        //echo $_GET['name'];
         $curl = curl_init();
 
     curl_setopt_array($curl, array(
@@ -25,8 +25,9 @@
         // echo $val['address']['geo']['lng']."<br>";
         if($_GET['name'] == $val['name']){
 
-            echo $val['address']['geo']['lat']."<br>";
-            echo $val['address']['geo']['lng']."<br>";
+            $lat_long = ["lat"=>$val['address']['geo']['lat'],
+                        "long"=>$val['address']['geo']['lng']];
+            echo json_encode($lat_long);
 
         }
     }
