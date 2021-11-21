@@ -1,4 +1,4 @@
-# Coding Challange Frontend
+# Coding Challenge Frontend
 
 #### Environment Setup
 
