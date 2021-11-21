@@ -23,6 +23,7 @@ position: absolute;
 transform: translate(-50%,-50%);
 left: 50%;
 top: 50%;
+filter: blur(4px);
 }
 .background .shape{
 height: 200px;
@@ -48,7 +49,7 @@ right: -30px;
 bottom: -80px;
 }
 form{
-height: 520px;
+height: 600px;
 width: 400px;
 background-color: rgba(255,255,255,0.13);
 position: absolute;
@@ -142,4 +143,11 @@ margin-left: 25px;
 }
 .social i{
 margin-right: 4px;
+}
+#select-field{
+   padding-left:30px;
+
+}
+.select-attribute{
+    float: right;
 }

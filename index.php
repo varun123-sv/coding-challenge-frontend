@@ -35,7 +35,7 @@
     width="810"
     height="710"
     frameborder="0" style="border:0"
-    src="https://maps.google.com/maps?q=28.553558,77.259132&output=embed" allowfullscreen>
+    src="https://maps.google.com/maps?q=20.5937,78.9629&output=embed" allowfullscreen>
 
   </iframe>
   <p id="ajax-req" style="color:white;"></p>
@@ -43,9 +43,7 @@
   <div class="background"></div>
 
   <form name="myform" action="index1.php" method="post" onsubmit="return validateForm()">
-
-      <h3>Login Here</h3>
-
+      <h3>Form</h3>
           <label for="name">Name</label>
           <select id="name" name="name" onchange="get_loc(value);">
           <option style="display:none;"></option>
@@ -56,17 +54,16 @@
 
           </select>
 
-      <p id="select-field">Please select the field</p>
-
+       <p id="select-field" style="padding:10px;">Please select the name field</p>
       <label for="title">Title</label>
-      <input type="input" placeholder="Password" id="title" name="title">
+      <input type="input" placeholder="Title" id="title" name="title">
       <label for="body">Body</label>
-      <input type="input" placeholder="Password" id="body" name="body">
+      <input type="input" placeholder="Body" id="body" name="body">
       <input type="hidden" name="userId" value = "1"><br>
-
       <button type="submit">Submit</button>
 
   </form>
+
 
   <script>
 
@@ -91,8 +88,10 @@
 
   function invalid(){
       var x = document.getElementById("select-field");
+      var y = document.getElementById("name");
       x.style.color = "red";
-      x.style.display = "inline";
+      x.style.display = "block";
+      y.placeholder ="Please select the field"
       return false;
   }
 
