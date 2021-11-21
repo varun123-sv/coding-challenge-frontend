@@ -42,7 +42,7 @@
 
   <div class="background"></div>
 
-  <form name="myform" action="index1.php" method="post" onsubmit="return validateForm()">
+  <form name="myform" action="lib/posts.php" method="post" onsubmit="return validateForm()">
       <h3>Form</h3>
           <label for="name">Name</label>
           <select id="name" name="name" onchange="get_loc(value);">
@@ -81,7 +81,7 @@
         }
 
       // Send a request
-      xhttp.open("GET", "./loc.php?name="+name);
+      xhttp.open("GET", "lib/loc.php?name="+name);
       xhttp.send();
 
   }
